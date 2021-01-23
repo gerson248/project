@@ -66,18 +66,18 @@ app.delete('/profesor/:id', async (req,res) => {
 })
 
 /** Método para sustituir */
-app.patch('/profesor/:id', async (req,res) => {
+app.put('/profesor/:id', async (req,res) => {
    try {
       const id = req.params.id
-      const profesor = await Profesor.findById(id, req.body);
+      const profesor = await Profesor.findByIdAndUpdate(id, req.body);
       if(!profesor) {
          res.status(404).send('This profesor does not exist!!!!');
          console.log('Please, introduce a valid id!!')
       }
       else {
+         profesor.save()
          res.send('Success update!!!!!!')
          console.log('Success update!!!!!!')
-         profesor.save()
       }
    } catch(e) {
       res.status(500).send(e.message)
