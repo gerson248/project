@@ -1,6 +1,8 @@
 nav > a {
-    padding: 5px;
+    padding: 5px 15px;
     text-decoration: none;
+    letter-spacing: 1px;
+    margin: auto 20px;
 }
 
 nav > a.active{
@@ -8,5 +10,6 @@ nav > a.active{
 }
 
 .header-row{
+    padding: 0 40px;
     width: 100%;
 }
