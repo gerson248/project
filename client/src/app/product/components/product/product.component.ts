@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/core/models/product.model';
+import { CartService } from 'src/app/core/services/cart/cart.service';
 
 @Component({
   selector: 'app-product',
@@ -8,24 +9,18 @@ import { Product } from 'src/app/core/models/product.model';
 })
 export class ProductComponent implements OnInit {
 
-    // nuestra clase ProductComponent ya tiene un decorador component con el selector y un template
-    // para que angular reconozca este component (decorador) como parte de esta aplicacion lo agregaremos a (app.module.ts)
+    
     @Input() product!: Product;
     @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
     today = new Date();
 
     constructor(
-        //private cartService: CartService
+        private cartService: CartService
     ) {
         console.log('1. constructor');
     }
 
-    // tslint:disable-next-line: typedef
-    // ngOnChanges(changes: SimpleChanges) {
-    //     console.log('2. ngOnChanges');
-    //     console.log(changes);
-    // }
 
 
     // tslint:disable-next-line: typedef
@@ -46,8 +41,7 @@ export class ProductComponent implements OnInit {
     // tslint:disable-next-line: typedef
     addCart() {
         console.log('Añadir al carrito');
-        //this.cartService.addCart(this.product);
-        // this.productClicked.emit(this.product.id);
+        this.cartService.addCart(this.product);
     }
 
 }
