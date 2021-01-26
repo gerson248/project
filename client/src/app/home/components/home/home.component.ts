@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // nos indica cuando los elementos hijos ya fueron redenderizados
+
   // tslint:disable-next-line: typedef
   ngAfterViewInit() {
     this.mySwiper = new Swiper('.swiper-container');

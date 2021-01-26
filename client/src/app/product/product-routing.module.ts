@@ -16,12 +16,10 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-      // forChild crea un módulo que contiene todas las directivas y las rutas dadas,
-      // pero no incluye el servicio de enrutador.
-      RouterModule.forChild(routes),
+    RouterModule.forChild(routes),
   ],
   exports: [
-      RouterModule
+    RouterModule
   ]
 })
 export class ProductRoutingModule {}

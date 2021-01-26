@@ -17,7 +17,6 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchProducts();
-    //this.products = this.productsService.getAllProducts()
   }
 
   // tslint:disable-next-line: typedef
@@ -30,10 +29,6 @@ export class ProductsComponent implements OnInit {
   // tslint:disable-next-line: typedef
   fetchProducts() {
     this.products = this.productsService.getAllProducts()
-    /*.subscribe(products => {
-      this.products = products;
-      // console.log(products);
-    });*/
   }
 
 }
