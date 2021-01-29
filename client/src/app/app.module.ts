@@ -10,6 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { CartComponent } from './cart/cart.component';
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
