@@ -5,15 +5,7 @@
 export const environment = {
   production: false,
   // ambiente de produccion (lo que ira al final)
-  url_api: 'https://platzi-store.herokuapp.com',
-  firebase: {
-    apiKey: "AIzaSyCru0w1eZeh32HQZQ7V4Dtow6rmh613RFc",
-    authDomain: "platzi-store-3dc5a.firebaseapp.com",
-    projectId: "platzi-store-3dc5a",
-    storageBucket: "platzi-store-3dc5a.appspot.com",
-    messagingSenderId: "485303843228",
-    appId: "1:485303843228:web:f3ac09525edbed3a567059"
-  }
+  url_api: 'https:url.com',
 };
 
 /*

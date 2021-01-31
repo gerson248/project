@@ -28,7 +28,25 @@ const routes: Routes = [
         // component: ProductsComponent
         loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
       },
+      {
+        path: 'order',
+        // canActivate: [AdminGuard],
+        // component: ContactComponent
+        loadChildren: () => import('./order/order.module').then(m => m.OrderModule)
+      },
     ],
+  },
+  {
+    // ** nos indica que no hizo match con nadie
+    path: 'admin',
+    // component: PageNotFoundComponent
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    // ** nos indica que no hizo match con nadie
+    path: '**',
+    // component: PageNotFoundComponent
+    loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
   },
 ];
 

@@ -1,0 +1,52 @@
+<p>form-product works!</p>
+<form [formGroup]="form" (ngSubmit)="saveProduct($event)">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Producto</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <!--FormControlName nos indicara nombre del controlador a ingresar (ejm actua como un controllerNombre en flutter)-->
+                        <input placeholder="Id" formControlName="id" matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <!--FormControlName nos indicara nombre del controlador a ingresar (ejm actua como un controllerNombre en flutter)-->
+                        <input placeholder="Title" formControlName="title" matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <!--FormControlName nos indicara nombre del controlador a ingresar (ejm actua como un controllerNombre en flutter)-->
+                        <input placeholder="Price" formControlName="price" matInput type="number">
+                    </mat-form-field>
+                    <!--Mostrara este error siempre y cuando se tenga errores y este sucio(dirty(que muestre el error una vez que ya haya tocado el campo))-->
+                    <div *ngIf="priceField?.errors && priceField?.dirty">
+                        <mat-error *ngIf="priceField?.hasError('price_invalid')">No te debes pasar de 10000</mat-error>
+                        <mat-error *ngIf="priceField?.hasError('required')">El campo es requerido</mat-error>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <!--FormControlName nos indicara nombre del controlador a ingresar (ejm actua como un controllerNombre en flutter)-->
+                        <textarea placeholder="Text" formControlName="description" matInput></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button [disabled]="form.invalid" mat-raised-button type="submit">Guardar</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
+
+

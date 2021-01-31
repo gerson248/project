@@ -53,12 +53,12 @@ export class ProductsService {
 
 
 
-  // tslint:disable-next-line: typedef
-  getAllProducts() {
-    // return this.products
+    // tslint:disable-next-line: typedef
+    getAllProducts() {
+      // return this.products
 
-    return this.products;
-  }
+      return this.products;
+    }
 
     // tslint:disable-next-line: typedef
     getProduct(id: string) {
