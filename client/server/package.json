@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Proyecto de Patrones de Diseño",
+  "main": "start.js",
+  "author": "Enzomon",
+  "license": "MIT",
+  "dependencies": {
+    "@shelf/jest-mongodb": "^1.2.3",
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "firebaseui": "^4.7.1",
+    "jest": "^26.6.3",
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.11.13"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node start.js"
+  }
+}
